@@ -7,7 +7,7 @@ import { createPackageBooking,
 
 const router = express.Router();
 
-router.post('/', createPackageBooking);
+router.post('/',verifyUser, createPackageBooking);
 router.get("/:id", verifyUser, getPackageBooking);
 router.get("/",verifyAdmin, getAllPackageBooking);
 
