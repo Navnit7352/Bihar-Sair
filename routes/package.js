@@ -11,10 +11,10 @@ import { verifyAdmin, verifyUser } from '../utils/verifyToken.js';
 const router = express.Router();
 
 //create new tour
-router.post('/',verifyUser, createPackage);
+router.post('/', createPackage);
 
 //delete tour
-router.delete('/:id' ,verifyUser, deletePackage);
+router.delete('/:id' , deletePackage);
 
 //get All tour
 router.get('/', getAllPackage);
